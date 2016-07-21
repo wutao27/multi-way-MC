@@ -1,4 +1,4 @@
-%% -- compute success ratio for given RHO
+%% -- synthetic experiments: compute success ratio for given RHO
 RHO = 0.9;
 count = zeros(5,1);
 for i=1:100
@@ -11,7 +11,7 @@ for i=1:100
 end
 ratio = count/100;
 
-%% - plot the success ratio
+%% - synthetic experiments: plot the success ratio
 clear all
 load('ratio')
 for i=1:5
@@ -24,7 +24,7 @@ set(h_legend,'FontSize',20);
 xlabel('$\rho(\tilde{\mathbf{H}}^{+})$','Interpreter','latex','FontSize',24,'FontWeight','bold');
 ylabel('ratio','FontSize',24,'FontWeight','bold')
 
-%% - compute the speed-up ratio for given RHO
+%% - synthetic experiments: compute the speed-up ratio for given RHO
 clear all
 RHO = 0.8;
 n = 1000;
@@ -45,7 +45,8 @@ end
 result = result/100;
 
 
-%% -
+%% - Harwell-Boeing sparse matrix collection
+% compute the average speed-up ratio
 clear all
 load('hbset.mat')
 result = zeros(5,1);
